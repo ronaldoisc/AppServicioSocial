@@ -20,7 +20,7 @@ function RegistrarTipoServicio()
         cancelButtonText: 'Cancelar'
     }).then((result) => {
         if (result.value) {
-            $.post("../../controlador/tipoServicio.controlador.php", datos,
+            $.post("../../../controlador/tipoServicio.controlador.php", datos,
                 function (data, textStatus) {
                     console.log(data);
                data = JSON.parse(data);
