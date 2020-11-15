@@ -6,7 +6,7 @@ function RegistrarDispositivo() {
         txtNombre: $("#txtNombre").val(),
         txtDescripcion: $("#txtDescripcion").val(),
         txtObservacion: $("#txtObservacion").val()
-    }
+    };
    
     Swal.fire({
         title: '¿Deseas agregar un nuevo Dispositivo?',
@@ -20,7 +20,7 @@ function RegistrarDispositivo() {
     }).then((result) => {
         if (result.value) {
             $.post("../../../controlador/dispositivo.controlador.php", datos,
-                function (data, textStatus,) {
+                function (data) {
                     alert(data = JSON.parse(data));
 
                     console.log(data.Mensaje);
@@ -29,20 +29,20 @@ function RegistrarDispositivo() {
                             'Dispositivo  almacenado',
                             '',
                             'success'
-                        )
+                        );
                         //formReset();
                     } else {
                         Swal.fire(
                             'Dispositivo no almacenado',
                             '',
                             'error'
-                        )
+                        );
                     }
                 }
             );
 
         }
-    })
+    });
 
 
 

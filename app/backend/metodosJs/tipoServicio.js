@@ -1,16 +1,16 @@
-function Registrar() 
+function RegistrarTipoServicio() 
 {
     
    let datos = {
-        accion: 'registrarUsuarioSistema',
-        txtNombre:$("#txtNombre").val(),
-        txtUsuario: $("#txtUsuario").val(),
-        txtPwd: $("#txtPwd").val()
+        accion: 'registrarTipoServicio',
+        txtTipoServicio:$("#txtTipoServicio").val(),
+        txtDescripcion: $("#txtDescripcion").val(),
+        
      
     };
    
     Swal.fire({
-        title: '¿Estas seguro de registrarte?',
+        title: '¿Estas seguro de agregar un nuevo tipo de servicio?',
         text: "Si estás seguro, presiona aceptar",
         icon: 'warning',
         showCancelButton: true,
@@ -20,7 +20,7 @@ function Registrar()
         cancelButtonText: 'Cancelar'
     }).then((result) => {
         if (result.value) {
-            $.post("../../controlador/usuario.sistema.controlador.php", datos,
+            $.post("../../controlador/tipoServicio.controlador.php", datos,
                 function (data, textStatus) {
                     console.log(data);
                data = JSON.parse(data);
