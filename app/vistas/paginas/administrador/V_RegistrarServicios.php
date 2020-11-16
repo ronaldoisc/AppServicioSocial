@@ -24,10 +24,10 @@
     <div class="container">
         <div class="row justify-content-center animated fadeInUp">
             <div class="col-md-6 col-sm-12 col-12">
-                <form action="">
-                    <input type="text"   placeholder="Nombre del servicio" class="form-control mt-4" id="">
-                    <input type="number" placeholder="Costo del servicio"  class="form-control mt-4" id="">
-                    <select  class="form-control mt-4" id="">
+                <form action="javascript:RegistrarServicios()">
+                    <input type="text"   placeholder="Nombre del servicio" class="form-control mt-4" id="txtServicio">
+                    <input type="number" placeholder="Costo del servicio"  class="form-control mt-4" id="txtCosto">
+                    <select  class="form-control mt-4" id="cmbTipoServicio">
                         <option value="">Tipo de servicio</option>
                     </select>
                     <button class="boton form-control ">Registrar</button>
@@ -35,6 +35,7 @@
             </div>
         </div>
     </div>
+    <script src="../../../backend/metodosJs/servicio.js"></script>
 </body>
 
 </html>

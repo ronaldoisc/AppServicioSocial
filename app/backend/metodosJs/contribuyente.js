@@ -13,7 +13,7 @@ function RegistrarContribuyente() {
         cmbLocalidad:  $("#cmbLocalidad").val(),
         txtCorreo:     $("#txtCorreo").val(),
         txtTelefono:   $("#txtTelefono").val()
-    }
+    };
     alert(JSON.stringify(datos));
     Swal.fire({
         title: '¿Deseas agregar un nuevo Contribuyente?',
@@ -28,7 +28,7 @@ function RegistrarContribuyente() {
         if (result.value) {
             $.post("../../../controlador/contribuyente.controlador.php", datos,
             
-                function (data, textStatus,) {
+                function (data) {
                   
                   
                 data = JSON.parse(data);
@@ -39,20 +39,20 @@ function RegistrarContribuyente() {
                             'Contribuyente  almacenado',
                             '',
                             'success'
-                        )
+                        );
                         //formReset();
                     } else {
                         Swal.fire(
                             'Contribuyente no almacenado',
                             '',
                             'error'
-                        )
+                        );
                     }
                 }
             );
 
         }
-    })
+    });
 }
 function getEstados() {
 
