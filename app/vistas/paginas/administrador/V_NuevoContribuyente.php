@@ -24,20 +24,24 @@
         <form action="javascript:RegistrarContribuyente()">
             <div class="row  animated fadeInUp">
                 <div class="col-md-6">
-                    <input   type="text"          class="form-control mt-4"    minlength="3" id="txtNombre"      placeholder="Ingresa tu Nombre">
+                    <label for="" class="font-weight-bold">Información Personal</label>
+                    <input   type="text"          class="form-control mt-0"    minlength="3" id="txtNombre"      placeholder="Ingresa tu Nombre">
                     <input   type="text"          class="form-control mt-4"    minlength="3" id="txtApepat"      placeholder="Ingresa tu Apellido Paterno">
                     <input   type="text"          class="form-control mt-4"    minlength="3" id="txtApemat"      placeholder="Ingresa tu Apellido Materno">
-                    <input   type="text"          class="form-control mt-4"    minlength="3" id="txtDireccion" " placeholder="Ingresa tu Dirección">
-                    <input   type="text"          class="form-control mt-4"    minlength="1" id="txtNumExt"      placeholder="Ingresa tu NúmExterior">
-                    <input   type="text"          class="form-control mt-4"                  id="txtNumInt"      placeholder="Ingresa tu NúmInterior">
+                    <input   type="text"          class="form-control mt-4"   minlength="18" id="txtCurp"         placeholder="Ingresa tu curp">
+                    <select                       class="form-control mt-4"                  id="cmbEstados"    ></select>
+                    <select                       class="form-control mt-4"                  id="cmbMunicipios" ></select>
+                   
+                    
 
 
                 </div>
                 <div class="col-md-6">
-                    <input   type="text"          class="form-control mt-4"   minlength="18" id="txtCurp"         placeholder="Ingresa tu curp">
-                    <select                       class="form-control mt-4"                  id="cmbEstados"    ></select>
-                    <select                       class="form-control mt-4"                  id="cmbMunicipios" ></select>
-                    <select                       class="form-control mt-4"                  id="cmbLocalidad"> </select>
+                    <label for="" class="font-weight-bold">Contacto</label>
+                    <select                       class="form-control mt-0"                  id="cmbLocalidad"> </select>
+                    <input   type="text"          class="form-control mt-4"    minlength="3" id="txtDireccion" " placeholder="Ingresa tu Dirección">
+                    <input   type="text"          class="form-control mt-4"    minlength="1" id="txtNumExt"      placeholder="Ingresa tu NúmExterior">
+                    <input   type="text"          class="form-control mt-4"                  id="txtNumInt"      placeholder="Ingresa tu NúmInterior">
                     <input   type="email"         class="form-control mt-4"   minlength="1"  id="txtCorreo"       placeholder="Ingresa tu Correo">
                     <input   type="text"          class="form-control mt-4"   minlength="10" id="txtTelefono"     placeholder="Ingresa tu Telefono">
                 </div>

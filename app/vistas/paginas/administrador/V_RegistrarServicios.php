@@ -26,7 +26,7 @@
             <div class="col-md-6 col-sm-12 col-12">
                 <form action="javascript:RegistrarServicios()">
                     <input type="text"   placeholder="Nombre del servicio" class="form-control mt-4" id="txtServicio">
-                    <input type="number" placeholder="Costo del servicio"  class="form-control mt-4" id="txtCosto">
+                    <input type="number" placeholder="Costo"  class="form-control mt-4" id="txtCosto">
                     <select  class="form-control mt-4" id="cmbTipoServicio">
                         <option value="">Tipo de servicio</option>
                     </select>

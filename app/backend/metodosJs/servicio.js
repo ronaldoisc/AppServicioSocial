@@ -6,7 +6,7 @@ function RegistrarServicios() {
         txtCosto: $("#txtCosto").val(),
         cmbIdTipoServicio: $("#cmbTipoServicio").val()
     };
-    
+
     Swal.fire({
         title: '¿Estas seguro de agregar un nuevo servicio?',
         text: "Si estás seguro, presiona aceptar",
