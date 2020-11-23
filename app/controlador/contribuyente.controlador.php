@@ -18,7 +18,7 @@ if (!isset($_POST["accion"])) {
         $idLocalidad = $_POST['cmbLocalidad'];
         $correo      = $_POST['txtCorreo'];
         $telefono    = $_POST['txtTelefono'];
-
+         
         $cmd=$conexion->prepare("insert into Contribuyentes (Nombre,ApellidoPaterno,ApellidoMaterno,Direccion,NoExterior,NoInterior,Curp,IdLocalidad,Correo,Telefono) values (?,?,?,?,?,?,?,?,?,?)");
         $cmd->bind_param("sssssssiss", $nombre, $apepat, $apemat, $direccion, $numExt,$numInt,$curp,$idLocalidad,$correo,$telefono);
         if ($cmd->execute()) {

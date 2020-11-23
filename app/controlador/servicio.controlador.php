@@ -10,16 +10,18 @@ if(!isset($_POST["accion"])){
         $nombre=$_POST["txtNombre"];
         $costo=$_POST["txtCosto"];
         $idTipoServicio=$_POST["cmbIdTipoServicio"];
-
-        $cmd=$conexion->prepare("insert into Servicios (NombreServicio,Costo,IdTipoServicio) values (?,?,?)");
-        $cmd->bind_param("sii", $nombre,$costo,$idTipoServicio);
-        if ($cmd->execute()) {
-            $Mensaje = array("Mensaje" => "ok");
-            echo json_encode($Mensaje);
-        } else {
-            $Mensaje = array("Mensaje" => "error");
-            echo json_encode($Mensaje);
-        }
+         if(isset($nombre) && isset($costo) && isset($idTipoServicio)){
+            $cmd=$conexion->prepare("insert into Servicios (NombreServicio,Costo,IdTipoServicio) values (?,?,?)");
+            $cmd->bind_param("sii", $nombre,$costo,$idTipoServicio);
+            if ($cmd->execute()) {
+                $Mensaje = array("Mensaje" => "ok");
+                echo json_encode($Mensaje);
+            } else {
+                $Mensaje = array("Mensaje" => "error");
+                echo json_encode($Mensaje);
+            }
+         }
+        
     }else if($_POST["accion"]=="getTipoServicios"){
         $cmd = "select * from TipoServicio;";
         $respuesta = $conexion->query($cmd);

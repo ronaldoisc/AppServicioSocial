@@ -12,15 +12,16 @@ if (!isset($_POST['accion'])) {
         $descripcion   = $_POST['txtDescripcion'];
         $fechaRegistro = date("Y-m-d");
         $observaciones = $_POST['txtObservacion'];
-
-        $cmd = $conexion->prepare("insert into Dispositivos (Id,Nombre,Descripcion,FechaRegistro,Observaciones) values (?,?,?,?,?)");
-        $cmd->bind_param("sssss", $id, $nombre, $descripcion, $fechaRegistro, $observaciones);
-        if ($cmd->execute()) {
-            $Mensaje = array("Mensaje" => "ok");
-            echo json_encode($Mensaje);
-        } else {
-            $Mensaje = array("Mensaje" => "error");
-            echo json_encode($Mensaje);
+        if (isset($id) && isset($nombre) && isset($descripcion) && isset($observaciones)) {
+            $cmd = $conexion->prepare("insert into Dispositivos (Id,Nombre,Descripcion,FechaRegistro,Observaciones) values (?,?,?,?,?)");
+            $cmd->bind_param("sssss", $id, $nombre, $descripcion, $fechaRegistro, $observaciones);
+            if ($cmd->execute()) {
+                $Mensaje = array("Mensaje" => "ok");
+                echo json_encode($Mensaje);
+            } else {
+                $Mensaje = array("Mensaje" => "error");
+                echo json_encode($Mensaje);
+            }
         }
     }
 }

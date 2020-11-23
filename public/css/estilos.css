@@ -1,3 +1,10 @@
+  
+th, td {  
+    text-align: center;  
+    border: 1 px solid black;  
+    border-collapse: collapse;  
+}  
+
 #fondoLogin{
     /*background-color:whitesmoke;*/
    background-color:#256d7b;

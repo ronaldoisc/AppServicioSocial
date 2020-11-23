@@ -33,5 +33,6 @@
 
     </div>
    <script src="../../../backend/metodosJs/dispositivo.js"></script>
+   
 </body>
 </html>

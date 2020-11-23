@@ -20,35 +20,28 @@
     <link rel="stylesheet" href="../../../../public/css/estilos.css">
     <link rel="stylesheet" href="../../../../public/css/normalize.css">
     <h1 class="text-center">Ranking de consumo de agua</h1>
+    
     <div class="container">
-        <table class="table table-striped">
-            <thead class="thead-dark">
-                <tr>
-                    <th>#</th>
-                    <th>Mes</th>
-                    <th>Estado</th>
-                    <th>Litros</th>
+    <select name="" id="tipo" class="mb-5">
+    <option value="1">--Mostrar por--</option>
+        <option value="2">Por usuario</option>
+        <option value="3">Por localidad</option>
+        <option value="4">Por Municipio</option>
+    </select> 
+        <div id="contenido">
 
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Nov</td>
-                    <td>Puebla</td>
-                    <td>6000</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Nov</td>
-                    <td>Puebla</td>
-                    <td>6000</td>
-                </tr>
-            </tbody>
-        </table>
-        <button class="btn btn-danger">Descargar PDF</button>
+            <table class="table table-striped" id="tabla">
+                <thead class="thead-dark" id="encabezado">
+                   
+                </thead>
+                <tbody id="tBody">
+                  
+                </tbody>
+            </table>
+        </div>
+        <button class="btn btn-danger" onclick="javascript:generate()">Descargar PDF</button>
     </div>
-
+    <script src="../../../backend/metodosJs/ranking.js"></script>
 </body>
 
 </html>
