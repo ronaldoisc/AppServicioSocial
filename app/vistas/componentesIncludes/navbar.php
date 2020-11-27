@@ -1,5 +1,6 @@
 <nav class="navbar navbar-expand-sm navbar-dark color-primario">
-    <a class="navbar-brand" href="#">Sistema de control de consumo de Agua</a>
+<button class="btn btn-primary" id="menu-toggle"><i class="fas fa-bars"></i></button>
+    <a class="navbar-brand" href="#">Control de agua</a>
     <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>

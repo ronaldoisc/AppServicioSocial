@@ -35,7 +35,6 @@ function RegistrarAsignarDispositivo() {
         cmbIdContribuyente: $("#cmbContribuyente").val()
         
     };
-    alert(JSON.stringify(datos));
    
     Swal.fire({
         title: '¿Deseas realizar la asignación?',
@@ -59,7 +58,7 @@ function RegistrarAsignarDispositivo() {
                             '',
                             'success'
                         );
-                        //formReset();
+                       
                     } else {
                         Swal.fire(
                             'Asignación no almacenada',

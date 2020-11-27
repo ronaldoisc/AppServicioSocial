@@ -1,5 +1,4 @@
 
-
 function generate() {
   var doc = new jsPDF('p', 'pt', 'letter');
   var res = doc.autoTableHtmlToJson(document.getElementById("tabla"));
@@ -17,13 +16,12 @@ function generate() {
   doc.save("Estados.pdf");
 }
 
+
 $(document).ready(function () {
 
   $('#tipo').change(function (e) {
     e.preventDefault();
-
     var id = $("#tipo").val();
-    //alert(id);
     if (id == "2") {
       $("#encabezado").empty();
       $.post("../../../controlador/ranking.controlador.php", {
@@ -84,6 +82,37 @@ $(document).ready(function () {
               '<td>' + val.Municipio + '</td>' +
               '<td>' + val.localidad + '</td>' +
               '<td>' + val.litros + '</td>';
+
+
+            salida += '</tr>';
+          });
+          $("#tBody").append(salida);
+        });
+    }else if(id=="4"){
+      $("#encabezado").empty();
+      $.post("../../../controlador/ranking.controlador.php", {
+        accion: 'consumoMunicipio'
+      },
+        function (data) {
+          var encabezado = "";
+
+          encabezado += '<tr>' +
+            '<th>Fecha</th>' +
+            '<th>Municipio</th>' +
+            '<th>Litros</th>';
+          encabezado += "</tr>";
+          $("#encabezado").append(encabezado);
+          var salida = "";
+
+
+          $.each(data, function (i, val) {
+            
+            $("#tBody").empty();
+            salida += '<tr>' +
+
+              '<td>' + val.Fecha + '</td>' +
+              '<td>' + val.Municipio + '</td>' +
+              '<td>' + val.Litros + '</td>';
 
 
             salida += '</tr>';

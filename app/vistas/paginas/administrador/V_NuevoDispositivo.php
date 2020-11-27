@@ -33,6 +33,6 @@
 
     </div>
    <script src="../../../backend/metodosJs/dispositivo.js"></script>
-   
+   <script src="../../../../public/js/app.js"></script>
 </body>
 </html>

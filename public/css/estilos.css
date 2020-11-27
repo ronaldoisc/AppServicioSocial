@@ -1,64 +1,57 @@
-  
-th, td {  
-    text-align: center;  
-    border: 1 px solid black;  
-    border-collapse: collapse;  
-}  
+li a{
+  color: white;
+  text-decoration: none;
+}
+ul{
+ list-style: none;
 
-#fondoLogin{
-    /*background-color:whitesmoke;*/
-   background-color:#256d7b;
-    /*256d7b */
-    /*159, 213, 209*/
-  }
-  .tarjeta-color{
-    /*  background-color:#2296ad;*/
-    background-color: whitesmoke;
-      
-      
-  }
-  
-  .card-option {
-      animation-name: animation1;
-      animation-duration: 2s;
-      animation-iteration-count: 1;
-      transition: transform 0.5s;
-      /*animation-fill-mode: forwards;
-      transform: scale(0);*/
-      cursor: pointer;
-  }
-  a {
-      text-decoration: none;
-  }
-  
-  .zoom {
-      animation-name: animation1;
-      animation-duration: 1s;
-      animation-iteration-count: 1;
-      /*transition: transform 0.5s;*/
-       transition: transform 1s;
-  }
-  /*---------------------------------------------*/
+}
+ #wrapper {
+  overflow-x: hidden;
 
-  .color-input{
-      background-color: rgb(230, 230, 230);
-  }
-  @keyframes animation1 {
-      100% {
-          transform: rotate(-180deg);
-      }
-  }
-  .boton{
-     text-align: center;
-     padding-top: 20px;
-     padding-bottom: 40px;
-     font-size: 20px;
-     margin-top: 20px;
-     background-color: rgb(74, 138, 219);
-     color:white;
-    
-    
-  }
+}
+
+#sidebar-wrapper {
+min-height: 100vh;
+margin-left: -15rem;
+-webkit-transition: margin .25s ease-out;
+-moz-transition: margin .25s ease-out;
+-o-transition: margin .25s ease-out;
+transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+padding: 0.875rem 1.25rem;
+font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+width: 15rem;
+}
+
+#page-content-wrapper {
+min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+margin-left: 0;
+}
+
+@media (min-width: 768px) {
+#sidebar-wrapper {
+  margin-left: 0;
+}
+
+#page-content-wrapper {
+  min-width: 0;
+  width: 100%;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: -15rem;
+}
+}
+
  
   .color-primario{
     background-color: rgb(74, 138, 219);
@@ -415,7 +408,95 @@ th, td {
       .bounceIn {
         animation-name: bounceIn;
       }
+        
+
+
+
+
+th, td {  
+    text-align: center;  
+    border: 1 px solid black;  
+    border-collapse: collapse;  
+}  
+
+#fondoLogin{
+    /*background-color:whitesmoke;*/
+   background-color:#256d7b;
+    /*256d7b */
+    /*159, 213, 209*/
+  }
+  .tarjeta-color{
+    /*  background-color:#2296ad;*/
+    background-color: whitesmoke;
       
+      
+  }
+  
+  .card-option {
+      animation-name: animation1;
+      animation-duration: 2s;
+      animation-iteration-count: 1;
+      transition: transform 0.5s;
+      /*animation-fill-mode: forwards;
+      transform: scale(0);*/
+      cursor: pointer;
+  }
+  a {
+      text-decoration: none;
+  }
+  
+  .zoom {
+      animation-name: animation1;
+      animation-duration: 1s;
+      animation-iteration-count: 1;
+      /*transition: transform 0.5s;*/
+       transition: transform 1s;
+  }
+  /*---------------------------------------------*/
+
+  .color-input{
+      background-color: rgb(230, 230, 230);
+  }
+  @keyframes animation1 {
+      100% {
+          transform: rotate(-180deg);
+      }
+  }
+  .boton{
+     text-align: center;
+     padding-top: 20px;
+     padding-bottom: 40px;
+     font-size: 20px;
+     margin-top: 20px;
+     background-color: rgb(74, 138, 219);
+     color:white;
+    
+    
+  }
+  .botonLogin{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-size: 15px;
+    margin-bottom: 20px;
+   
+    color:white;
+   
+   
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
       @keyframes bounceInDown {
         from, 60%, 75%, 90%, to {
           animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);

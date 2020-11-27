@@ -6,7 +6,6 @@ function RegistrarTipoServicio()
         txtTipoServicio:$("#txtTipoServicio").val(),
         txtDescripcion: $("#txtDescripcion").val(),
         
-     
     };
    
     Swal.fire({
@@ -22,7 +21,7 @@ function RegistrarTipoServicio()
         if (result.value) {
             $.post("../../../controlador/tipoServicio.controlador.php", datos,
                 function (data, textStatus) {
-                    console.log(data);
+                   
                data = JSON.parse(data);
                                       
                        if(data.Mensaje=="ok"){

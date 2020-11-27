@@ -1,5 +1,5 @@
 function RegistrarServicios() {
-    alert("hola");
+   
     let datos = {
         accion: 'registrarServicio',
         txtNombre: $("#txtServicio").val(),
@@ -20,7 +20,7 @@ function RegistrarServicios() {
         if (result.value) {
             $.post("../../../controlador/servicio.controlador.php", datos,
                 function (data, textStatus) {
-                    console.log(data);
+                 
                     data = JSON.parse(data);
 
                     if (data.Mensaje == "ok") {

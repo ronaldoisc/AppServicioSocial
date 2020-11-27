@@ -33,7 +33,7 @@ function RegistrarContribuyente() {
                   
                 data = JSON.parse(data);
                    
-                    console.log(data);
+                   
                     if (data.Mensaje == "ok") {
                         Swal.fire(
                             'Contribuyente  almacenado',
@@ -108,11 +108,7 @@ $(document).ready(function () {
             });
     }
     );
-   /* $('#cmbLocalidad').change(function (e) {
-         e.preventDefault();
-         let localidad = $('#cmbLocalidad').val();
-         alert(localidad);
-     })*/
+
     getEstados();
 
 
