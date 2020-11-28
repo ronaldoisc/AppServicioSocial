@@ -24,6 +24,8 @@ $(document).ready(function () {
     var id = $("#tipo").val();
     if (id == "2") {
       $("#encabezado").empty();
+      $("#alerta").empty();
+     
       $.post("../../../controlador/ranking.controlador.php", {
         accion: 'consumoUsuarios'
       },
@@ -31,10 +33,10 @@ $(document).ready(function () {
           var encabezado = "";
 
           encabezado += '<tr>' +
-            '<th>Nombre</th>' +
-            '<th>Municipio</th>' +
-            '<th>Localidad</th>' +
-            '<th>Litros</th>';
+            '<th scope="col">Nombre</th>' +
+            '<th scope="col">Municipio</th>' +
+            '<th scope="col">Localidad</th>' +
+            '<th scope="col">Litros</th>';
           encabezado += "</tr>";
           $("#encabezado").append(encabezado);
 
@@ -59,6 +61,7 @@ $(document).ready(function () {
         });
     } else if (id == "3") {
       $("#encabezado").empty();
+      $("#alerta").empty();
       $.post("../../../controlador/ranking.controlador.php", {
         accion: 'consumoLocalidad'
       },
@@ -66,9 +69,9 @@ $(document).ready(function () {
           var encabezado = "";
 
           encabezado += '<tr>' +
-            '<th>Municipio</th>' +
-            '<th>Localidad</th>' +
-            '<th>Litros</th>';
+            '<th scope="col">Municipio</th>' +
+            '<th scope="col">Localidad</th>' +
+            '<th scope="col">Litros</th>';
           encabezado += "</tr>";
           $("#encabezado").append(encabezado);
           var salida = "";
@@ -90,6 +93,7 @@ $(document).ready(function () {
         });
     }else if(id=="4"){
       $("#encabezado").empty();
+      $("#alerta").empty();
       $.post("../../../controlador/ranking.controlador.php", {
         accion: 'consumoMunicipio'
       },
@@ -97,9 +101,9 @@ $(document).ready(function () {
           var encabezado = "";
 
           encabezado += '<tr>' +
-            '<th>Fecha</th>' +
-            '<th>Municipio</th>' +
-            '<th>Litros</th>';
+            '<th scope="col">Fecha</th>' +
+            '<th scope="col">Municipio</th>' +
+            '<th scope="col">Litros</th>';
           encabezado += "</tr>";
           $("#encabezado").append(encabezado);
           var salida = "";

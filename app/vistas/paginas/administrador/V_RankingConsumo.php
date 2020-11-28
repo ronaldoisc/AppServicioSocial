@@ -19,28 +19,51 @@
     ?>
     <link rel="stylesheet" href="../../../../public/css/estilos.css">
     <link rel="stylesheet" href="../../../../public/css/normalize.css">
-    <h1 class="text-center">Ranking de consumo de agua</h1>
-    
-    <div class="container">
-    <select name="" id="tipo" class="mb-5">
-    <option value="1">--Mostrar por--</option>
-        <option value="2">Por usuario</option>
-        <option value="3">Por localidad</option>
-        <option value="4">Por Municipio</option>
-    </select> 
-        <div id="contenido">
+    <div class="d-flex" id="wrapper">
+        <?php
+        include("../../componentesIncludes/sidebar.php");
+        ?>
 
-            <table class="table table-striped" id="tabla">
-                <thead class="thead-dark" id="encabezado">
-                   
-                </thead>
-                <tbody id="tBody">
-                  
-                </tbody>
-            </table>
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="text-lg-right">
+                        <div>
+                            <select name="" id="tipo" class="caja">
+                                <option value="1">--------Filtrar por----------</option>
+                                <option value="2">Contribuyente</option>
+                                <option value="3">Localidades</option>
+                                <option value="4">Municipios</option>
+                            </select>
+                            <button class="btn btn-danger" onclick="javascript:generate()">Descargar PDF</button>
+                        </div>
+                    </div>
+
+
+
+                    <div id="contenido">
+                        <div id="alerta">
+                            <div class="alert alert-success" role="alert">
+                                ! No hay Información para mostrar !
+                            </div>
+                        </div>
+
+                        <table class="table table-hover" id="tabla">
+                            <thead class="thead-dark" id="encabezado">
+
+                            </thead>
+                            <tbody id="tBody">
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
         </div>
-        <button class="btn btn-danger" onclick="javascript:generate()">Descargar PDF</button>
+
     </div>
+    <script src="../../../../public/js/app.js"></script>
     <script src="../../../backend/metodosJs/ranking.js"></script>
 </body>
 

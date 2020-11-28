@@ -14,7 +14,7 @@ function RegistrarContribuyente() {
         txtCorreo:     $("#txtCorreo").val(),
         txtTelefono:   $("#txtTelefono").val()
     };
-    alert(JSON.stringify(datos));
+    
     Swal.fire({
         title: '¿Deseas agregar un nuevo Contribuyente?',
         text: "Si estás seguro, presiona aceptar",

@@ -1,3 +1,40 @@
+body{
+  background-color: rgb(243, 240, 240);
+}
+#contenido{
+  background-color: rgb(248, 244, 244);
+}
+.caja {
+  margin:20px auto 40px auto;	
+  border:1px solid #1d1c1c;
+  height:38px;
+  overflow: hidden;
+  width: 230px;
+  position:relative;
+}
+select {
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  height: 30px;
+  padding: 5px;
+  width: 250px;
+}
+select:focus{ outline: none;}
+
+.caja::after{
+ content:"\025be";
+ display:table-cell;
+ padding-top:7px;
+ text-align:center;
+ width:30px;
+ height:30px;
+ background-color:#0f0f0f;
+ position:absolute;
+ top:0;
+ right:0px;	
+ pointer-events: none;
+}
 li a{
   color: white;
   text-decoration: none;

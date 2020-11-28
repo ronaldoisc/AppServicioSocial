@@ -18,32 +18,42 @@
     ?>
     <link rel="stylesheet" href="../../../../public/css/estilos.css">
     <link rel="stylesheet" href="../../../../public/css/normalize.css">
-    <h1 class="text-center">Asignar Dispositivos</h1>
-    <div class="container">
-        <form action="javascript:RegistrarAsignarDispositivo()">
-            <div class="row justify-content-center animated fadeInDown">
-                <div class="col-md-5 col-sm-12 col-12">
-                    <select  id="cmbContribuyente" class="form-control mt-4">
-                        <option value="">Elige el contribuyente</option>
-                    </select>
-                </div>
-                <div class="col-md-5 col-sm-12 col-12">
-                    <select id="cmbDispositivo" class="form-control mt-4">
-                        <option value="">Elige un dispositivo</option>
-                    </select>
-                </div>
+    <div class="d-flex" id="wrapper">
+        <?php
+        include("../../componentesIncludes/sidebar.php");
+        ?>
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <h1 class="text-center">Asignar Dispositivos</h1>
+                <div class="container">
+                    <form action="javascript:RegistrarAsignarDispositivo()">
+                        <div class="row justify-content-center animated fadeInDown">
+                            <div class="col-md-5 col-sm-12 col-12">
+                                <select id="cmbContribuyente" class="form-control mt-4" required>
+                                    <option value="">Elige el contribuyente</option>
+                                </select>
+                            </div>
+                            <div class="col-md-5 col-sm-12 col-12">
+                                <select id="cmbDispositivo" class="form-control mt-4" required>
+                                    <option value="">Elige un dispositivo</option>
+                                </select>
+                            </div>
 
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <button class="boton form-control ">Registrar</button>
+                            </div>
+                        </div>
+
+                    </form>
+
+
+                </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <button class="boton form-control ">Registrar</button>
-                </div>
-            </div>
-
-        </form>
-
-
+        </div>
     </div>
+    <script src="../../../../public/js/app.js"></script>
     <script src="../../../backend/metodosJs/asignarDispositivos.js"></script>
 </body>
 
