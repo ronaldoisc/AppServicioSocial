@@ -5,7 +5,7 @@
                 <ul class="nava">
 
                     <li>
-                        <a class="nav-link" href="PerfilAdmin.php">
+                        <a class="nav-link" href="V_PerfilAdmin.php">
                         <i class="far fa-2x fa-address-card"></i>
                             <p>Perfil</p>
                         </a>

@@ -33,6 +33,7 @@ $(document).ready(function () {
           var encabezado = "";
 
           encabezado += '<tr>' +
+            '<th scope="col">Fecha</th>' +
             '<th scope="col">Nombre</th>' +
             '<th scope="col">Municipio</th>' +
             '<th scope="col">Localidad</th>' +
@@ -48,7 +49,7 @@ $(document).ready(function () {
             
             $("#tBody").empty();
             salida += '<tr>' +
-
+            '<td>' + val.Fecha + '</td>' +
               '<td>' + val.Nombre + '</td>' +
               '<td>' + val.Municipio + '</td>' +
               '<td>' + val.localidad + '</td>' +
@@ -69,6 +70,7 @@ $(document).ready(function () {
           var encabezado = "";
 
           encabezado += '<tr>' +
+          '<th scope="col">Fecha</th>' +
             '<th scope="col">Municipio</th>' +
             '<th scope="col">Localidad</th>' +
             '<th scope="col">Litros</th>';
@@ -81,7 +83,7 @@ $(document).ready(function () {
             
             $("#tBody").empty();
             salida += '<tr>' +
-
+            '<td>' + val.Fecha+ '</td>' +
               '<td>' + val.Municipio + '</td>' +
               '<td>' + val.localidad + '</td>' +
               '<td>' + val.litros + '</td>';

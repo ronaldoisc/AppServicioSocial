@@ -4,7 +4,7 @@ if(!isset($_POST["accion"])){
 }else{
     include("../config/database.php");
     if($_POST["accion"]=="consumoUsuarios"){
-        $cmd = "select Contribuyentes.Nombre,Lecturas.FechaLectura,Municipios.Municipio,localidades.nombre as localidad,Lecturas.NoLitros
+        $cmd = "select Contribuyentes.Nombre,Lecturas.FechaLectura as Fecha,Municipios.Municipio,localidades.nombre as localidad,Lecturas.NoLitros
         from DispositivoContribuyente inner join Dispositivos on
          Dispositivos.Id=DispositivoContribuyente.IdDispositivo inner join 
          Contribuyentes on Contribuyentes.Id=DispositivoContribuyente.IdContribuyente
@@ -22,7 +22,7 @@ if(!isset($_POST["accion"])){
          header("Content-type: application/json; charset= utf8");
          echo json_encode($usuariosConsumo); 
     }else if($_POST["accion"]=="consumoLocalidad"){
-        $cmd="select Lecturas.FechaLectura,Municipios.Municipio,localidades.nombre as localidad,SUM(Lecturas.NoLitros) as litros
+        $cmd="select Lecturas.FechaLectura as Fecha,Municipios.Municipio,localidades.nombre as localidad,SUM(Lecturas.NoLitros) as litros
         from DispositivoContribuyente inner join Dispositivos on
          Dispositivos.Id=DispositivoContribuyente.IdDispositivo inner join 
          Contribuyentes on Contribuyentes.Id=DispositivoContribuyente.IdContribuyente
