@@ -11,10 +11,12 @@
 <body>
     <?php
     session_start();
+    if(!isset($_SESSION["Id"]) || $_SESSION["Id"]>1){
+        header('location:../../../../index.php');
+    }
     include("../../../../public/librerias/estilos.php");
     include("../../../../public/librerias/scripts.php");
     include("../../componentesIncludes/navbar.php");
-    include("../../../config/database.php");
 
     ?>
     <link rel="stylesheet" href="../../../../public/css/estilos.css">
@@ -81,6 +83,7 @@
                     </div>
                 </div>
             </div>
+            <?php include("../../componentesIncludes/footer.php");?>
         </div>
     </div>
     <script src="../../../../public/js/app.js"></script>

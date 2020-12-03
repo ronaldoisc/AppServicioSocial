@@ -3,7 +3,7 @@ function generate() {
   var doc = new jsPDF('p', 'pt', 'letter');
   var res = doc.autoTableHtmlToJson(document.getElementById("tabla"));
   var finalY = doc.lastAutoTable.finalY || 10;
-  doc.text('Ranking consumo de agua 2020', 14, finalY + 15);
+  doc.text('Reporte sobre el consumo de agua', 14, finalY + 15);
   doc.autoTable(res.columns, res.data, {
     // startY: finalY + 20,
     html: "#tabla",
@@ -13,7 +13,7 @@ function generate() {
   }
   );
 
-  doc.save("Estados.pdf");
+  doc.save("Reporte.pdf");
 }
 
 

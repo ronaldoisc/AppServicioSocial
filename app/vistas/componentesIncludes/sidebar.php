@@ -47,11 +47,13 @@
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="../conexion/cerrarsesion.php">
+                        <a class="nav-link" href="../../../config/cerrar.php">
                         <i class="far fa-2x fa-times-circle"></i>
                             <p>Cerrar Sesión</p>
                         </a>
                     </li>
                 </ul>
             </div>
+            
         </div>
+        

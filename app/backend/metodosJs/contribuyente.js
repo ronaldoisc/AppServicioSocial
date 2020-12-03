@@ -89,7 +89,8 @@ $(document).ready(function () {
                     $('#cmbMunicipios').append(`<option value="${value.Id}">${value.Municipio}</option>`);
                 });
             });
-    });
+    }
+    );
     $('#cmbMunicipios').change(function (e) {
         e.preventDefault();
         let municipio = $('#cmbMunicipios').val();

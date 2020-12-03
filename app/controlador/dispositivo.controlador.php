@@ -19,7 +19,7 @@ if (!isset($_POST['accion'])) {
                 $Mensaje = array("Mensaje" => "ok");
                 echo json_encode($Mensaje);
             } else {
-                $Mensaje = array("Mensaje" => "error");
+                $Mensaje = array("Mensaje" => "vacio");
                 echo json_encode($Mensaje);
             }
         }

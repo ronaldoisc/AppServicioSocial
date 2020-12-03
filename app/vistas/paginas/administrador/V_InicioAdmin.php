@@ -14,6 +14,9 @@
 <body>
     <?php
     session_start();
+    if(!isset($_SESSION["Id"]) || $_SESSION["Id"]>1){
+        header('location:../../../../index.php');
+    }
     include("../../../../public/librerias/estilos.php");
     include("../../../../public/librerias/scripts.php");
     include("../../componentesIncludes/navbar.php");
@@ -26,6 +29,7 @@
             <div class="container-fluid">
                 <h1 class="text-center mt-4">Modulo Administrador</h1>
             </div>
+            <?php include("../../componentesIncludes/footer.php");?>
         </div>
     </div>
 

@@ -8,17 +8,20 @@
     <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 
-
+      
             <li class="nav-item active">
                 <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
             </li>
 
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Acerca de Nosotros</a>
-            </li>
+            
             <li class="nav-item active">
                 <a class="nav-link" href="#">Contacto</a>
             </li>
+            <li class="nav-item active">
+            
+            <a class="nav-link" href="#"><i class="fa fa-user"></i> <?php echo $_SESSION['Nombre'];?></a>
+        </li>
+          
 
     </div>
 

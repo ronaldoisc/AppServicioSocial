@@ -4,6 +4,32 @@ body{
 #contenido{
   background-color: rgb(248, 244, 244);
 }
+.color-primario{
+  background-color: rgb(74, 138, 219);
+}
+footer {
+
+  background-color: #333333;
+  text-align: center;
+  font-family: sans-serif;
+  color: whitesmoke;
+  width: 100%;
+  margin-top: 50px;
+
+  bottom: 0;
+  
+}
+  .PfixedNone{
+
+  height: 120px;
+}
+.Pfixed{
+  position:fixed;
+ 
+}
+
+
+
 .caja {
   margin:20px auto 40px auto;	
   border:1px solid #1d1c1c;
@@ -43,6 +69,15 @@ ul{
  list-style: none;
 
 }
+a{
+  color: black;
+}
+th, td {  
+  text-align: center;  
+  border: 1 px solid black;  
+  border-collapse: collapse;  
+}  
+/*estilos de sidebar*/
  #wrapper {
   overflow-x: hidden;
 
@@ -88,11 +123,9 @@ margin-left: 0;
   margin-left: -15rem;
 }
 }
-
+/*fin de css sidebar*/
  
-  .color-primario{
-    background-color: rgb(74, 138, 219);
-  }
+ /* inicio animaciones*/
   
   @keyframes animation2 {
       0% {
@@ -103,20 +136,7 @@ margin-left: 0;
       }
   }
 
-  a{
-      color: black;
-  }
-  footer{
-     background-color: #333333;
-     text-align: center;
-     font-family: sans-serif;
-     color: whitesmoke;
-     width: 100%;
-     margin-top: 50px;
-     
-     bottom: 0;
-     position:fixed;
-    }
+
   
     .animated {
         animation-duration: 1s;
@@ -178,7 +198,6 @@ margin-left: 0;
         animation-name: flash;
       }
       
-      /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
       
       @keyframes pulse {
         from {
@@ -333,8 +352,7 @@ margin-left: 0;
       .tada {
         animation-name: tada;
       }
-      
-      /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+    
       
       @keyframes wobble {
         from {
@@ -450,11 +468,7 @@ margin-left: 0;
 
 
 
-th, td {  
-    text-align: center;  
-    border: 1 px solid black;  
-    border-collapse: collapse;  
-}  
+
 
 #fondoLogin{
     /*background-color:whitesmoke;*/

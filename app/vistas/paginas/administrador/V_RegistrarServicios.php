@@ -11,10 +11,12 @@
 <body>
     <?php
     session_start();
+    if(!isset($_SESSION["Id"]) || $_SESSION["Id"]>1){
+        header('location:../../../../index.php');
+    }
     include("../../../../public/librerias/estilos.php");
     include("../../../../public/librerias/scripts.php");
     include("../../componentesIncludes/navbar.php");
-    include("../../../config/database.php");
 
     ?>
     <link rel="stylesheet" href="../../../../public/css/estilos.css">
@@ -31,8 +33,8 @@
                     <div class="row justify-content-center animated fadeInUp">
                         <div class="col-md-6 col-sm-12 col-12">
                             <form action="javascript:RegistrarServicios()">
-                                <input type="text" placeholder="Nombre del servicio" class="form-control mt-4" id="txtServicio">
-                                <input type="number" placeholder="Costo" class="form-control mt-4" id="txtCosto">
+                                <input type="text" placeholder="Nombre del servicio" class="form-control mt-4" id="txtServicio" required>
+                                <input type="number" placeholder="Costo" class="form-control mt-4" id="txtCosto" required>
                                 <select class="form-control mt-4" id="cmbTipoServicio">
                                     <option value="">Tipo de servicio</option>
                                 </select>
@@ -42,6 +44,7 @@
                     </div>
                 </div>
             </div>
+            <?php include("../../componentesIncludes/footer.php");?>
         </div>
     </div>
     <script src="../../../backend/metodosJs/servicio.js"></script>

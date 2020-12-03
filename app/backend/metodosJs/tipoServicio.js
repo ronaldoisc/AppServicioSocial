@@ -7,6 +7,7 @@ function RegistrarTipoServicio()
         txtDescripcion: $("#txtDescripcion").val(),
         
     };
+    alert(JSON.stringify(datos));
    
     Swal.fire({
         title: '¿Estas seguro de agregar un nuevo tipo de servicio?',
@@ -24,16 +25,17 @@ function RegistrarTipoServicio()
                    
                data = JSON.parse(data);
                                       
-                       if(data.Mensaje=="ok"){
+                       if(data.Mensaje == "ok"){
                         Swal.fire(
-                            'Usuario Registrado',
+                            'Tipo de servicio Registrado',
                             '',
                             'success'
                         );
                     
-                       }else{
+                       }
+                       else if(data.Mensaje == "error"){
                         Swal.fire(
-                            'Usuario no Registrado',
+                            'Tipo de servicio no Registrado',
                             '',
                             'error'
                         );

@@ -11,20 +11,25 @@
 <body>
     <?php
     session_start();
+    if(!isset($_SESSION["Id"]) || $_SESSION["Id"]>1){
+        header('location:../../../../index.php');
+    }
     include("../../../../public/librerias/estilos.php");
     include("../../../../public/librerias/scripts.php");
     include("../../componentesIncludes/navbar.php");
-    include("../../../config/database.php");
-
     ?>
+     <link rel="stylesheet" href="../../../../public/css/normalize.css">
     <link rel="stylesheet" href="../../../../public/css/estilos.css">
-    <link rel="stylesheet" href="../../../../public/css/normalize.css">
+   
     <div class="d-flex" id="wrapper">
         <?php
         include("../../componentesIncludes/sidebar.php");
         ?>
+        
         <div id="page-content-wrapper">
+       
             <div class="container-fluid">
+                
                 <h1 class="text-center">Nuevo Contribuyente</h1>
                 <div class="container">
                     <form action="javascript:RegistrarContribuyente()">
@@ -56,18 +61,35 @@
                         <div class="row justify-content-center mt-3 mb-5">
                             <div class="col-md-6">
                                 <button class="boton form-control ">Registrar</button>
+                                
+                         
                                 <br>
                                 <br>
                                 <br>
+                                
                             </div>
+                            
                         </div>
+                      
+                       
 
 
                     </form>
+                    
                 </div>
+                
             </div>
+           <footer class="PfixedNone">
+    <p>Usted ha ingresado como <?php echo $_SESSION["Nombre"] ?></p>
+    <div></div>
+    <p class="copyright">Todos los Derechos Reservados 2020 &COPY;</p>
+</footer>
+          
+          
         </div>
+       
     </div>
+    
     <script src="../../../../public/js/app.js"></script>
     <script src="../../../backend/metodosJs/contribuyente.js"></script>
 </body>

@@ -9,7 +9,7 @@ if (!isset($_POST["accion"])) {
     if ($_POST["accion"] = "registrarTipoServicio") {
         $tipoServicio = $_POST["txtTipoServicio"];
         $descripcion = $_POST["txtDescripcion"];
-        if (isset($tipoServicio) && isset($descripcion)) {
+        if (isset($tipoServicio) && isset($descripcion) && $tipoServicio!="" && $descripcion!="") {
             $cmd = $conexion->prepare("insert into TipoServicio (Servicio,Descripcion) values (?,?)");
             $cmd->bind_param("ss", $tipoServicio, $descripcion);
             if ($cmd->execute()) {

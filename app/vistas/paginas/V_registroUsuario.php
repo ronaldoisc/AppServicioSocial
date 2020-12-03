@@ -10,7 +10,7 @@
      session_start();
     include("../../../public/librerias/estilos.php");
     include("../../../public/librerias/scripts.php");
-    include("../componentesIncludes/navbar.php");
+    
     include("../../config/database.php");
     ?>
      <link rel="stylesheet" href="../../../public/css/estilos.css">
