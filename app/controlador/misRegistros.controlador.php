@@ -8,7 +8,7 @@ if(!isset($_POST["accion"])){
     include("../config/database.php");
     if($_POST["accion"]=="getMisRegistros"){
         $Id = $_POST['id'];
-        $cmd = "select PagoServicios.Id,Contribuyentes.Nombre,Contribuyentes.ApellidoPaterno,Contribuyentes.ApellidoMaterno,Servicios.NombreServicio,Servicios.Costo,FechaPago, UsuariosSistema.Nombre from PagoServicios inner join Contribuyentes on Contribuyentes.Id=PagoServicios.IdContribuyente inner join Servicios on Servicios.Id=PagoServicios.IdServicio inner join UsuariosSistema on UsuariosSistema.Id=PagoServicios.IdUsuarioSistema where UsuariosSistema.Id=".$Id." order by PagoServicios.Id desc;";
+        $cmd = "select PagoServicios.Id,Contribuyentes.Nombre,Contribuyentes.ApellidoPaterno,Contribuyentes.ApellidoMaterno,Servicios.NombreServicio,Servicios.Costo,FechaPago, UsuariosSistema.Nombre as usuario from PagoServicios inner join Contribuyentes on Contribuyentes.Id=PagoServicios.IdContribuyente inner join Servicios on Servicios.Id=PagoServicios.IdServicio inner join UsuariosSistema on UsuariosSistema.Id=PagoServicios.IdUsuarioSistema where UsuariosSistema.Id=".$Id." order by PagoServicios.Id desc;";
         $respuesta = $conexion->query($cmd);
         $i = 0;
         $registros = array();
