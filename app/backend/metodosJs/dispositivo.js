@@ -21,7 +21,7 @@ function RegistrarDispositivo() {
         if (result.value) {
             $.post("../../../controlador/dispositivo.controlador.php", datos,
                 function (data) {
-                    alert(data = JSON.parse(data));
+                data = JSON.parse(data);
 
                     console.log(data.Mensaje);
                     if (data.Mensaje == "ok") {

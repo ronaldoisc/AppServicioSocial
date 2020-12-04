@@ -7,7 +7,7 @@ function RegistrarTipoServicio()
         txtDescripcion: $("#txtDescripcion").val(),
         
     };
-    alert(JSON.stringify(datos));
+    
    
     Swal.fire({
         title: '¿Estas seguro de agregar un nuevo tipo de servicio?',
