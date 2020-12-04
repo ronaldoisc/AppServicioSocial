@@ -45,7 +45,7 @@ function getRegistroId() {
                         <p> ${ val.Nombre} ${ val.ApellidoPaterno} ${ val.ApellidoMaterno}</p>
                         <h5>Localidad</h5>
                         <p>${ val.localidad}</p>
-                        <h5>Direccion</h5>
+                        <h5>Dirección</h5>
                         <p>${ val.Direccion}</p>
 
                     </div>

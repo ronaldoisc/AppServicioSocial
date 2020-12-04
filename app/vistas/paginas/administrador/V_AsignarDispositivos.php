@@ -51,7 +51,7 @@
                                 <button class="boton form-control ">Registrar</button>
                             </div>
                         </div>
-¿
+
                     </form>
                 </div>
             </div>
