@@ -27,7 +27,7 @@ if($cmd->num_rows >0){
 
    
 }else{
-    echo "usuario/contrasena incorrectas";
+  echo "Usuario/Contraseña incorrectos";
 }
 }
 ?>
