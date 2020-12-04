@@ -10,13 +10,11 @@
 
       
             <li class="nav-item active">
-                <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="V_InicioAdmin.php">Inicio <span class="sr-only">(current)</span></a>
             </li>
 
             
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Contacto</a>
-            </li>
+            
             <li class="nav-item active">
             
             <a class="nav-link" href="#"><i class="fa fa-user"></i> <?php echo $_SESSION['Nombre'];?></a>

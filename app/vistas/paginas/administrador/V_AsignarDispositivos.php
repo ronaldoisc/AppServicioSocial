@@ -25,8 +25,13 @@
         ?>
         <div id="page-content-wrapper">
             <div class="container-fluid">
-                <h1 class="text-center">Asignar Dispositivos</h1>
+
+
                 <div class="container">
+                    <div class="text-lg-right">
+                        <h2 class="text-center">Asignar Dispositivos</h2>
+                        <a href="V_Asignaciones.php" class=" btn btn-danger"> Ver Asignaciones</a>
+                    </div>
                     <form action="javascript:RegistrarAsignarDispositivo()">
                         <div class="row justify-content-center animated fadeInDown">
                             <div class="col-md-5 col-sm-12 col-12">
@@ -46,13 +51,11 @@
                                 <button class="boton form-control ">Registrar</button>
                             </div>
                         </div>
-
+¿
                     </form>
-
-
                 </div>
             </div>
-            <?php include("../../componentesIncludes/footer.php");?>
+            <?php include("../../componentesIncludes/footer.php"); ?>
         </div>
     </div>
     <script src="../../../../public/js/app.js"></script>

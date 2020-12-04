@@ -48,5 +48,16 @@ if (!isset($_POST["accion"])) {
                 echo json_encode($Mensaje);
             }
         }
+    }else if($_POST["accion"]=="getAsignaciones"){
+        $cmd = "select Contribuyentes.Nombre,Contribuyentes.ApellidoPaterno,Dispositivos.Nombre as Dispositivo from  DispositivoContribuyente inner join Contribuyentes on Contribuyentes.Id=DispositivoContribuyente.IdContribuyente inner join Dispositivos on Dispositivos.Id=DispositivoContribuyente.IdDispositivo;";
+         $respuesta = $conexion->query($cmd);
+         $i = 0;
+         $asignacion = array();
+         while ($row = $respuesta->fetch_array(MYSQLI_ASSOC)) {
+             $asignacion[$i] = $row;
+             $i++;
+         }
+         header("Content-type: application/json; charset= utf8");
+         echo json_encode($asignacion); 
     }
 }

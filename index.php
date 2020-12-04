@@ -24,7 +24,7 @@
                 <div class="card h-100 tarjeta-color rounded">
                     <!--<img class="card-img-top" src="holder.js/100x180/" alt="">-->
                     <div class="card-body">
-                        <h4 class="card-title text-center text-black mt-3">BIENVENIDOS!</h4>
+                        <h3 class="card-title text-center text-black mt-3">BIENVENIDOS!</h3>
                         <div class="redes-sociales text-center ">
                             <a href=""><i class="fab fa-2x fa-facebook mr-2"></i></a>
                             <a href=""><i class="fab  fa-2x fa-linkedin-in mr-2"></i></a>
@@ -35,18 +35,11 @@
                             <input type="text" required class="form-control p-4 text-center color-input" id="txtUsuario" name="txtUsuario">
                             <label for="" class="font-weight-500">CONTRASEÑA</label>
                             <input type="password" required class="form-control p-4 text-center color-input" id="txtPwd" name="txtPwd">
-                            <div class="row justify-content-center">
-                                <div class="col-md-4">
-                                    recuerdame
-                                </div>
-                                <div class="col-md-5">
-                                    ¿Olvidó tu contraseña?
-                                </div>
-                            </div>
+                           
                             <div class="row justify-content-center">
                                 <div class="col-md-6 col-sm-4 col-12">
 
-                                    <button type="submit" class="form-control rounded-pill bg-warning mt-4 botonLogin">INCIAR SESION</button>
+                                    <button type="submit" class="form-control rounded-pill bg-warning mt-4 botonLogin">INCIAR SESIÓN</button>
                                 </div>
                                 <div class="col-md-6 col-sm-4 col-12">
                                     <a href="app/vistas/paginas/V_registroUsuario.php" class="form-control rounded-pill mt-4 text-center bg-warning text-decoration-none botonLogin">REGISTRATE</a>

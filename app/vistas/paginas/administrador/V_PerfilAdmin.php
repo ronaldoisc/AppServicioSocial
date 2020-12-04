@@ -35,8 +35,8 @@
                                     <div class="card-block text-center text-white ">
                                        
                                        <i class="fas fa-user-tie fa-7x mt-5"></i>
-                                        <h2 class="font-weight-bold mt-4">Ronaldo Tellez</h2>
-                                        <p>ADMINISTRADOR</p>
+                                        <h2 class="font-weight-bold mt-4">Administrador</h2>
+                                       
                                         <i class="far fa-edit fa-2x mb-4"></i>
 
                                     </div>
@@ -47,7 +47,7 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <p class="font-weight-bold">Email:</p>
-                                            <h6 class="text-muted">tellezleal9928@gmail.com</h6>
+                                            <h6 class="text-muted">correo@hmail.com</h6>
 
                                         </div>
                                         <div class="col-sm-6">

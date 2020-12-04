@@ -35,6 +35,7 @@ $(document).ready(function () {
           encabezado += '<tr>' +
             '<th scope="col">Fecha</th>' +
             '<th scope="col">Nombre</th>' +
+            '<th scope="col">Estado</th>' +
             '<th scope="col">Municipio</th>' +
             '<th scope="col">Localidad</th>' +
             '<th scope="col">Litros</th>';
@@ -50,7 +51,8 @@ $(document).ready(function () {
             $("#tBody").empty();
             salida += '<tr>' +
             '<td>' + val.Fecha + '</td>' +
-              '<td>' + val.Nombre + '</td>' +
+              '<td>' + val.Nombre + " "+val.ApellidoPaterno + '</td>' +
+              '<td>' + val.Estado+ '</td>' +
               '<td>' + val.Municipio + '</td>' +
               '<td>' + val.localidad + '</td>' +
               '<td>' + val.NoLitros + '</td>';
@@ -59,7 +61,8 @@ $(document).ready(function () {
             salida += '</tr>';
           });
           $("#tBody").append(salida);
-        });
+        }
+        );
     } else if (id == "3") {
       $("#encabezado").empty();
       $("#alerta").empty();
@@ -71,6 +74,7 @@ $(document).ready(function () {
 
           encabezado += '<tr>' +
           '<th scope="col">Fecha</th>' +
+          '<th scope="col">Estado</th>' +
             '<th scope="col">Municipio</th>' +
             '<th scope="col">Localidad</th>' +
             '<th scope="col">Litros</th>';
@@ -84,6 +88,7 @@ $(document).ready(function () {
             $("#tBody").empty();
             salida += '<tr>' +
             '<td>' + val.Fecha+ '</td>' +
+             '<td>' + val.Estado+ '</td>' +
               '<td>' + val.Municipio + '</td>' +
               '<td>' + val.localidad + '</td>' +
               '<td>' + val.litros + '</td>';
@@ -104,6 +109,7 @@ $(document).ready(function () {
 
           encabezado += '<tr>' +
             '<th scope="col">Fecha</th>' +
+            '<th scope="col">Estado</th>' +
             '<th scope="col">Municipio</th>' +
             '<th scope="col">Litros</th>';
           encabezado += "</tr>";
@@ -117,6 +123,7 @@ $(document).ready(function () {
             salida += '<tr>' +
 
               '<td>' + val.Fecha + '</td>' +
+              '<td>' + val.Estado + '</td>' +
               '<td>' + val.Municipio + '</td>' +
               '<td>' + val.Litros + '</td>';
 

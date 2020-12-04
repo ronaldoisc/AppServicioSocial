@@ -4,13 +4,13 @@ if(!isset($_POST["accion"])){
 }else{
     include("../config/database.php");
     if($_POST["accion"]=="consumoUsuarios"){
-        $cmd = "select Contribuyentes.Nombre,Lecturas.FechaLectura as Fecha,Municipios.Municipio,localidades.nombre as localidad,Lecturas.NoLitros
+        $cmd = "select Contribuyentes.Nombre,Contribuyentes.ApellidoPaterno,Lecturas.FechaLectura as Fecha,Estados.Estado,Municipios.Municipio,localidades.nombre as localidad,Lecturas.NoLitros
         from DispositivoContribuyente inner join Dispositivos on
          Dispositivos.Id=DispositivoContribuyente.IdDispositivo inner join 
          Contribuyentes on Contribuyentes.Id=DispositivoContribuyente.IdContribuyente
          inner join localidades on localidades.id=Contribuyentes.IdLocalidad inner join 
         Lecturas on Lecturas.IdDispositivo=Dispositivos.Id inner join Municipios
-         on Municipios.Id=localidades.municipio_id where 
+         on Municipios.Id=localidades.municipio_id inner join Estados on Estados.Id=Municipios.IdEstado where 
          Lecturas.FechaLectura=(select max(Lecturas.FechaLectura) from Lecturas) order by Lecturas.NoLitros desc;";
          $respuesta = $conexion->query($cmd);
          $i = 0;
@@ -22,13 +22,13 @@ if(!isset($_POST["accion"])){
          header("Content-type: application/json; charset= utf8");
          echo json_encode($usuariosConsumo); 
     }else if($_POST["accion"]=="consumoLocalidad"){
-        $cmd="select Lecturas.FechaLectura as Fecha,Municipios.Municipio,localidades.nombre as localidad,SUM(Lecturas.NoLitros) as litros
+        $cmd="select Lecturas.FechaLectura as Fecha,Estados.Estado,Municipios.Municipio,localidades.nombre as localidad,SUM(Lecturas.NoLitros) as litros
         from DispositivoContribuyente inner join Dispositivos on
          Dispositivos.Id=DispositivoContribuyente.IdDispositivo inner join 
          Contribuyentes on Contribuyentes.Id=DispositivoContribuyente.IdContribuyente
          inner join localidades on localidades.id=Contribuyentes.IdLocalidad inner join 
         Lecturas on Lecturas.IdDispositivo=Dispositivos.Id inner join Municipios
-         on Municipios.Id=localidades.municipio_id where Lecturas.FechaLectura=(select max(Lecturas.FechaLectura) from Lecturas) 
+         on Municipios.Id=localidades.municipio_id inner join Estados on Estados.Id=Municipios.IdEstado where Lecturas.FechaLectura=(select max(Lecturas.FechaLectura) from Lecturas) 
          group by localidades.id order by litros desc;";
          $respuesta = $conexion->query($cmd);
          $i = 0;
@@ -40,13 +40,13 @@ if(!isset($_POST["accion"])){
          header("Content-type: application/json; charset= utf8");
          echo json_encode($localidadConsumo);
     }else if($_POST["accion"]=="consumoMunicipio"){
-        $cmd="select Lecturas.FechaLectura as Fecha,Municipios.Municipio as Municipio,SUM(Lecturas.NoLitros) as Litros
+        $cmd="select Lecturas.FechaLectura as Fecha,Estados.Estado,Municipios.Municipio as Municipio,SUM(Lecturas.NoLitros) as Litros
         from DispositivoContribuyente inner join Dispositivos on
          Dispositivos.Id=DispositivoContribuyente.IdDispositivo inner join 
          Contribuyentes on Contribuyentes.Id=DispositivoContribuyente.IdContribuyente
          inner join localidades on localidades.id=Contribuyentes.IdLocalidad inner join 
         Lecturas on Lecturas.IdDispositivo=Dispositivos.Id inner join Municipios
-         on Municipios.Id=localidades.municipio_id where Lecturas.FechaLectura=(select max(Lecturas.FechaLectura) from Lecturas) 
+         on Municipios.Id=localidades.municipio_id inner join Estados on Estados.Id=Municipios.IdEstado where Lecturas.FechaLectura=(select max(Lecturas.FechaLectura) from Lecturas) 
          group by Municipios.Id order by Lecturas.NoLitros desc;";
 
          $respuesta = $conexion->query($cmd);

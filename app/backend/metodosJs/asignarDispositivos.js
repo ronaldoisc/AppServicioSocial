@@ -73,8 +73,34 @@ function RegistrarAsignarDispositivo() {
     });
 
 }
+function getAsignaciones(){
+    $.post("../../../controlador/asignarDispositivos.controlador.php", {
+        accion: 'getAsignaciones'
+      },
+        function (data) {
+          var salida = "";
+
+
+          $.each(data, function (i, val) {
+            
+            $("#tBody").empty();
+            salida += '<tr>' +
+         
+              '<td>' + val.Nombre + '</td>' +
+              '<td>' + val.ApellidoPaterno+ '</td>' +
+              '<td>' + val.Dispositivo+ '</td>';
+             
+
+
+            salida += '</tr>';
+          });
+          $("#tBody").append(salida);
+        }
+        );
+}
 $(document).ready(function () {
    
     getContribuyentes();
     getDispositivos();
+    getAsignaciones();
 });
